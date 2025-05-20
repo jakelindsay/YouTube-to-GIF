@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Your Generated GIF</title>
+    <style>
+        body { font-family: sans-serif; margin: 20px; background-color: #f4f4f4; color: #333; text-align: center; }
+        .container { background-color: #fff; padding: 20px; border-radius: 8px; box-shadow: 0 0 10px rgba(0,0,0,0.1); display: inline-block; }
+        img { max-width: 100%; border: 1px solid #ddd; margin-bottom: 20px; }
+        a { display: inline-block; margin: 10px; padding: 10px 15px; background-color: #007bff; color: white; text-decoration: none; border-radius: 4px; }
+        a:hover { background-color: #0056b3; }
+        .download-btn { background-color: #28a745; }
+        .download-btn:hover { background-color: #1e7e34; }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Your GIF is Ready!</h1>
+        <img src="{{ gif_url }}" alt="Generated GIF">
+        <br>
+        <a href="{{ url_for('download_gif', filename=filename) }}" class="download-btn">Download GIF</a>
+        <a href="{{ url_for('index') }}">Create Another GIF</a>
+    </div>
+</body>
+</html>
