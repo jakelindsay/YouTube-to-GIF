@@ -235,4 +235,3 @@ class TestGifGenerator(unittest.TestCase):
 if __name__ == '__main__':
     # This allows running the tests directly from this file
     unittest.main(argv=['first-arg-is-ignored'], exit=False)
-```
