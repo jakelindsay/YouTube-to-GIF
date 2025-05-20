@@ -63,10 +63,6 @@ If you're deploying to a platform that uses [Nixpacks](https://nixpacks.com) suc
 Railway, make sure the build process knows how to start your application. A
 simple way to do this is to add a `Procfile` in the project root:
 
-```Procfile
-web: python app.py
-```
-
 Nixpacks will detect this file and use it as the start command. The application
 is configured to read the `PORT` environment variable, so it works on platforms
 that dynamically assign a port.
