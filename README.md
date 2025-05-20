@@ -57,6 +57,20 @@ A Python-based web application that allows you to specify a link to a YouTube vi
 3.  Open your web browser and navigate to:
     [http://127.0.0.1:5000/](http://127.0.0.1:5000/)
 
+## Deploying with Nixpacks / Railway
+
+If you're deploying to a platform that uses [Nixpacks](https://nixpacks.com) such as
+Railway, make sure the build process knows how to start your application. A
+simple way to do this is to add a `Procfile` in the project root:
+
+```Procfile
+web: /opt/venv/bin/python app.py
+```
+
+Nixpacks will detect this file and use it as the start command. The application
+is configured to read the `PORT` environment variable, so it works on platforms
+that dynamically assign a port.
+
 ## File Structure
 
 ```
